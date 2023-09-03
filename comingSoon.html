@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/comingSoonStyle.css">
+
+    <title>Paklancer | Coming Soon</title>
+</head>
+<body>
+    <section class="container">
+        <center><img src="./Images/paklancerLogo.png" border="0px" height="185px" width="270px"></a><br></center>
+   
+        <img src="./Images/background.jfif" alt="" class="image" style="z-index: -2;"/>
+<header>We're launching soon</header>
+<p>Our website is under construction. We're working hard to improve our website and we'll ready to launch after.</p>
+
+<div class="time-content">
+
+    <div class="time days">
+<span class="number">30</span>
+<span class="text">days</span>
+    </div>
+
+    <div class="time hours">
+        <span class="number">09</span>
+        <span class="text">hours</span>
+            </div>
+
+            <div class="time minutes">
+                <span class="number">09</span>
+                <span class="text">minutes</span>
+                    </div>
+
+                    <div class="time seconds">
+                        <span class="number">09</span>
+                        <span class="text">seconds</span>
+                            </div>
+
+</div>
+
+<div class="email-content">
+    <p>Subscribe now to get the latest updates!</p>
+    <div class="input-box">
+       <input type="email" placeholder="Enter your email">
+       <button>Notify me</button>
+    </div>
+</div>
+
+    </section>
+
+
+
+<!-- JS for time -->
+
+<script>
+    const seconds=document.querySelector(".seconds .number");
+    const minutes=document.querySelector(".minutes .number");
+    const hours=document.querySelector(".hours .number");
+    const days=document.querySelector(".days .number");
+
+    let secValue=60,
+    minValue=60,
+    hourValue=9,
+    dayValue=30;
+
+    const timeFunction=setInterval(()=>{
+        secValue--;
+            if(secValue===0){
+                minValue--;
+                secValue=60;
+            }
+            if(minValue===0){
+                hourValue--;
+                minValue=60;
+            }
+            if(hourValue===0){
+                dayValue--;
+                hourValue=60;
+            }
+
+            if(dayValue===0){
+                clearInterval(timeFunction)
+            }
+
+        console.log(secValue);
+        seconds.textContent=secValue;
+        minutes.textContent=minValue;
+        hours.textContent=hourValue;
+        days.textContent=dayValue;
+
+    },1000); //1000ms=1s
+
+</script>
+
+</body>
+</html>

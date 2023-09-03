@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+    }
+
+    .container {
+      max-width: 400px;
+      height:500px;
+      margin: 0 auto;
+      padding: 20px;
+      margin-top: 50px;
+      background: linear-gradient(to bottom, #a5a2a2, #5a9747);
+      border-radius: 15px;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+      width: 380px;
+      padding: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+
+    .login-button {
+      width: 100%;
+      padding: 10px;
+      background: linear-gradient(to bottom, #302f2f, #46663c);
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    .login-button:hover {
+        background:  #7FBF7F;
+    }
+    #s-small{
+     margin-top:5px;
+        color: #000000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+        <center><img src="./Images/paklancerLogo.png" border="0px" height="185px" width="270px"></a><br></center>
+    <h2>Login Form</h2>
+    <form action="Profile.html">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button class="login-button" type="submit">Login</button>
+     <small id="s-small">Register as new user.</small>
+      <a href="signup.html" >Sign up!</a>
+    </form>
+  </div>
+</body>
+</html>

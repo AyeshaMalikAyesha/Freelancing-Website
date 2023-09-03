@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <script src="sc.js"></script>
+    <style>
+        body {
+      font-family: Arial, sans-serif;
+      background: white;
+    }
+    #s-small{
+     margin-top: 5in;
+        color: #000000;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 15px;
+      margin-top: 5px;
+      background: linear-gradient(to bottom, #a5a2a2, #5a9747);
+      border-radius: 15px;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"],
+    .form-group input[type="number"]{
+    width: 380px;
+      padding: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+    #signup-btn{
+        width: 100%;
+      padding: 10px;
+      background: linear-gradient(to bottom, #424242, #46663c);
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-bottom: 10px;
+
+    }
+    #signup-btn:hover{
+        background:  #7FBF7F;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container" >
+
+            <center><img src="./Images/paklancerLogo.png" border="0px" height="185px" width="270px"></a><br></center>
+    <h2>Sign Up</h2>
+    <form id="signupForm" onsubmit="validateForm(event)">
+        <div class="form-group">
+        <input type="text" name="fullName" placeholder="Full Name" required>
+        </div>
+        <div class="form-group">
+        <input type="email" name="email" placeholder="Email" required></div>
+        <div class="form-group">
+        <input type="password" name="password" placeholder=" Set Password" required></div>
+        <div class="form-group">
+        <input type="number" name="phone Number" placeholder="Enter you Phone Number"></div>
+        
+        <input type="submit" value="Sign Up" id="signup-btn">
+       <small id="s-small">Already have an account.</small>
+       <a href="login.html">Sign in</a>
+        
+    </form>
+</div>
+</body>
+</html>

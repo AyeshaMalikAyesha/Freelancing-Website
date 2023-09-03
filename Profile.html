@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/profileStyle.css"/>
+    <script src="https://kit.fontawesome.com/4efd760c90.js" crossorigin="anonymous"></script>
+    <title>My Profile</title>
+</head>
+<body>
+
+    <div class="fcontainer">
+        <nav class="about-nav">
+          <img src="./Images/Logo.png" class="logo" />
+          <ul id="sidemenu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+  
+            
+          </ul>
+        </nav>
+        </div>
+
+       
+
+
+    
+    <div class="containers">
+     
+       <div class="row">
+        <div class="left-container">
+
+        <form>
+            <div class="user-img">
+            <img src="./Images/profile.png" class="profile-pic" id="photo">
+            <input type="file" id="file">
+            <label for="file" id="uploadBtn"><i class="fas fa-camera"></i></label>
+            </div>
+
+            <!-- we used onchange because we can change image again and again -->
+            <!-- Acceptable file is image -->
+            <input type="text" placeholder="Enter your name" name="Name">
+            <label for="location" >Select your current location</label>
+            <select name="location">
+                <option>Pakistan</option>
+                <option>China</option>
+                <option>USA</option>
+                <option>UK</option>
+                <option>Germany</option>
+                <option>Turkey</option>
+                <option>Japan</option>
+                <option>Honk Kong</option>
+                <option>Sweden</option>
+            </select>
+            <textarea rows="5" cols="60" placeholder="Something about you" name="Description"></textarea>
+            <label for="location" >Select your language</label>
+            <select name="language">
+                <option>English</option>
+                <option>Urdu</option>
+                <option>Spanish</option>
+                <option>German</option>
+                <option>French</option>
+                <option>Greek</option>
+            </select>
+         
+           
+
+    
+       
+            <label for="location" >Select your English level</label>
+            <select name="language">
+                <option>Basic</option>
+                <option>Conversational</option>
+                <option>Native</option>
+                <option>Fluent</option>
+            </select>
+
+        </form>
+        </div>
+
+
+
+        <!-- Right Container -->
+        <div class="right-container">
+
+            <div class="title rows">
+              <h1 style="margin-bottom: 15px;">My Services</h1>
+              <i class="fa-solid fa-pen-to-square" id="editTitle" style="font-size: 30px;"></i>
+            <h2 id="titleDisplay" style="display: inline;color:rgb(32, 32, 32)">Edit your title</h2> 
+            <br>
+            <i class="fa-solid fa-pen-to-square" id="rate"></i>
+            <h3 style="display: inline;color:rgb(44, 43, 43)">Hours per week</h3>
+            <h3 id="hourDisplay" ></h3>
+            <br>
+            <i class="fa-solid fa-pen-to-square" id="project"></i>
+            <h3  style="display: inline;color:rgb(53, 52, 52)">Projects</h3>
+            <p id="projectDisplay"> </p>
+
+            </div>
+
+            <div class="portfolio rows">
+                
+                 <h1>Portfolio </h1>
+                <input class="file-upload" type="file" onchange="readURL(this)" accept="Images/*">
+            </div>
+        
+
+            <div class="skills rows">
+                <h1>Skills</h1>
+                <input type="checkbox" name="skill" value="python" id="pythonChecked" class="radioBtn">Python
+                <input type="checkbox" name="skill" value="php" id="phpChecked" class="radioBtn">PHP
+                <input type="checkbox" name="skill" value="java" id="javaChecked" class="radioBtn">java
+                <input type="checkbox" name="skill" value="graphic" id="graphicChecked" class="radioBtn">Graphic Designing
+                <input type="checkbox" name="skill" value="data" id="dataChecked" class="radioBtn">Data Entry
+            </div>
+            <div class="certifications rows">
+              <h1 style="margin-bottom: 10px;">Experiences</h1>
+              <i class="fa-solid fa-pen-to-square" id="experiences" style="font-size: 30px;"></i>
+                <h2 id="expSubDisplay" style="display: inline;color:rgb(53, 52, 52)">Add Experience </h2>
+                <p id="expDescDisplay" style="color:rgb(70, 67, 67);"></p>
+            </div>
+
+           
+
+        </div>
+        </div>
+       <button class="btn" type="submit" id="btnSave">Save</button>
+        </div>
+
+        <!-- Popup for title -->
+            <div class="popup popupTitle">
+                <div class="close-btn">&times;</div>
+                  <div class="form">
+                    <h1>Edit your Title</h1>
+                    <h3>Your Title</h3>
+                    <p>Enter a single sentence description of your professional skills/experience e.g. Full stack Web Developer with React JS Experience </p>
+                    <input type="text" id="gigTitle" name="title" placeholder="Enter your title">
+                  </div>
+                  <div class="btn" id="btnTitle">Save</div>
+            </div>
+
+            <!-- popup for hourly rate -->
+            <div class="popup popupRate">
+                <div class="close-btn">&times;</div>
+                <div class="hourlyRateForm">
+                    <h1>Hourly Rate</h1>
+                    <p>Please note that your new hourly rate will only apply to new contracts.</p>
+                    <div class="hourlyRate">
+                        <h3>Hourly Rate in pkr</h3>
+                        <input type="text" id="gigRate"> /hr
+                    </div>
+                    <div class="btn" id="btnRate">Save</div>
+                   
+                </div>
+            </div>
+          
+
+             <!-- popup for projects -->
+             <div class="popup popupProject">
+                <div class="close-btn">&times;</div>
+                <div class="projectForm">
+                    <h1>Overview</h1>
+                    <p>Use this space to show clients you have the skills and experience they're looking for.</p>
+                    <ul>
+                        <li>Describe your strengths and skills</li>
+                        <li>Highlight projects, accomplishments and education</li>
+                        <li>Keep it short and make sure it's error-free</li>
+                    </ul>
+                  
+                        <h3>Learn more</h3>
+                       <textarea id="gigProject" cols="5" rows="10" placeholder="I am a .NET developer with a Bachelor of science(B.S) in Information Technology from Bulacan State university and 5 years of software development experience"></textarea>
+                    
+                    <div class="btn" id="btnProject">Save</div>
+                   
+                </div>
+            </div>
+
+            <!-- popup for Experience -->
+            <div class="popup popupExperiences">
+              <div class="close-btn">&times;</div>
+              <div class="experienceForm">
+                  <h1>Add other Experiences</h1>
+                 <h3 >Subject</h3>
+                   <input id="expSubject" type="text" style="text-align: center;">
+                  <h3>Description</h3>
+                  <textarea cols="5" rows="10" id="expDescription"></textarea>
+                  <div class="btn" id="btnExperience">Save</div>
+                 
+              </div>
+          </div>
+        
+ <!-- Footer -->
+ 
+ <div class="footer">
+   <div class="fcontainer">
+       <div class="row footer-row">
+           <div class="footer-col-1">
+                     <h3>Download Our App</h3>
+                     <p>Download App for Android and ios Mobile Phone</p>
+                     <div class="app-logo">
+                       <img src="./Images/play-store.png">
+                       <img src="./Images/app-store.png">
+                     </div>
+           </div>
+           
+     <div class="footer-col-2">
+       <h3>Company</h3>
+         <ul>
+           <li>About Us</li>
+           <li>Contact Us</li>
+           <li>Leadership</li>
+           <li>Careers</li>
+         </ul>
+ </div>
+ <div class="footer-col-3">
+   <h3>Categories</h3>
+     <ul>
+       <li>Graphics & Design</li>
+       <li>Digital Marketing</li>
+       <li>Web Development</li>
+       <li>Programming & Tech</li>
+     </ul>
+ </div>
+ <div class="footer-col-4">
+   <h3>Support</h3>
+     <ul>
+       <li>Help & Support</li>
+       <li>Trust & Safety</li>
+       <li>Selling on WR.</li>
+       <li>Buying on WR.</li>
+     </ul>
+ </div>
+ </div>
+ <div class="social-icons">
+   <h2> Follow Us</h2>
+   <a
+     href="https://www.facebook.com/profile.php?id=100069493277941&mibextid=ZbWKwL"
+     target="_blank"
+     ><i class="fa-brands fa-facebook"></i
+   ></a>
+   <a href="https://twitter.com/Ayesha1ahseya?t=a_JFxbI-qDuAd-zsYiLH_A&s=08"
+     target="_blank">
+     <i class="fa-brands fa-twitter-square"></i>
+   </a>
+   <a
+     href="https://instagram.com/ayeshamalik4621?igshid=ZDdkNTZiNTM="
+     target="_blank"
+     ><i class="fa-brands fa-instagram"></i
+   ></a>
+   <a
+     href="https://www.linkedin.com/in/ayesha-aa3a2522a"
+     target="_blank"
+     ><i class="fa-brands fa-linkedin"></i
+   ></a>
+ </div>
+     
+       <hr>
+       <p class="copyright">&copy Copyright WR International Ltd. 2023</p>
+   </div>
+ </div>
+
+
+
+ 
+
+ 
+ <script>
+// Js for edit title
+const userInputTitle=document.getElementById('gigTitle');
+const btn1=document.getElementById('btnTitle');
+const titleDisplay=document.getElementById('titleDisplay');
+
+
+function func1(){
+ 
+   document.querySelector(".popupTitle").classList.remove("active");
+   titleDisplay.textContent=userInputTitle.value;
+ 
+}
+
+btn1.addEventListener('click',func1);
+
+ </script>
+
+<!-- Js for edit hourly rate -->
+
+<script>
+const gigRate=document.getElementById('gigRate');
+const btn2=document.getElementById('btnRate');
+const hourDisplay=document.getElementById('hourDisplay');
+
+
+function func2(){
+ 
+   document.querySelector(".popupRate").classList.remove("active");
+   hourDisplay.textContent=gigRate.value;
+ 
+}
+
+btn2.addEventListener('click',func2);
+ </script>
+
+
+<!-- Js for edit project -->
+<script>
+const gigProject=document.getElementById('gigProject');
+const btn3=document.getElementById('btnProject');
+const projectDisplay=document.getElementById('projectDisplay');
+
+
+function func3(){
+ 
+   document.querySelector(".popupProject").classList.remove("active");
+   projectDisplay.textContent=gigProject.value;
+ 
+}
+
+btn3.addEventListener('click',func3);
+ </script>
+
+
+
+
+<!--  Js for edit experience -->
+
+<script>
+  const expSubject=document.getElementById('expSubject');
+  const expDescription=document.getElementById('expDescription');
+  const btn4=document.getElementById('btnExperience');
+  const expSubDisplay=document.getElementById('expSubDisplay');
+  const expDescDisplay=document.getElementById('expDescDisplay');
+  
+  
+  function func4(){
+   
+     document.querySelector(".popupExperiences").classList.remove("active");
+     expSubDisplay.textContent=expSubject.value;
+     expDescDisplay.textContent=expDescription.value;
+   
+  }
+  btn4.addEventListener('click',func4);
+   </script>
+
+
+
+<!-- js for check box -->
+
+<script>
+const javaChecked=document.getElementById("javaChecked");
+const btnSave=document.getElementById('btnSave');
+
+btnSave.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent form submission 
+
+      // Check if the checkbox is checked
+      if (javaChecked.checked) {
+        // Redirect to the next page
+        window.location.href = 'https://presenter.jivrus.com/p/1B2utrKVW6-Z-bVfqWwGJ3dngu37AS6qtiNOWpM4DnNM';
+      }
+    });
+
+</script>
+  
+
+ 
+
+
+        <script src="javascript.js"></script>
+</body>
+</html>

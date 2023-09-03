@@ -1,0 +1,108 @@
+body { 
+    background: linear-gradient(to bottom, #3a3232, #2a551d);
+    background-size: cover;
+  }
+  
+  #wrapper {
+      width: 500px;
+      height: 100vh;
+      margin: 0 auto;
+  }
+  h2{
+    color:white;
+  }
+  .form{
+    width: 400px;
+    height: 210px;
+    background: "black";
+    margin: 0px auto;
+    padding-top: 5px;
+    border-radius: 10px;
+  }
+  
+  input[type="text"]{
+    display: block;
+    width: 309px;
+    height: 35px;
+    margin: 15px auto;
+    background: #fff;
+    border: 0px;
+    padding: 5px;
+    font-size: 16px;
+     border: 2px solid #fff;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  input[type="password"]{
+    display: block;
+    width: 309px;
+    height: 35px;
+    margin: 15px auto;
+    background: #fff;
+    border: 0px;
+    padding: 5px;
+    font-size: 16px;
+     border: 2px solid #fff;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  input[type="radio"]{
+    display: block;
+    width: 309px;
+    height: 35px;
+    margin: 15px auto;
+    background: #fff;
+    border: 0px;
+    padding: 5px;
+    font-size: 16px;
+     border: 2px solid #fff;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+  }
+  input[type="password"]:focus{
+    border: 2px solid #1abc9d
+  }
+  
+  input[type="text"]:focus{
+    border: 2px solid #1abc9d
+  }
+  
+  input[type="submit"]{
+    display: block;
+    
+    background: linear-gradient(to bottom, #000000, #2d4127);
+    width: 314px;
+    padding: 12px;
+    cursor: pointer;
+    color: #fff;
+    border: 0px;
+    margin: auto;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    font-size: 17px;
+    transition: all 0.3s ease;
+  }
+  
+  input[type="submit"]:hover{
+    background:  #7FBF7F;
+  }
+  
+  a{
+    color: rgb(255, 253, 253);
+    display: block;
+    margin: 25px;
+    font-size: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  a:hover{
+    color: #1abc9d;
+  }
+  
+ 
+
+ 
